@@ -1,0 +1,1 @@
+C:\Users\natha\code\rust\ai-chatbox\target\debug\ai-chatbox.exe: C:\Users\natha\code\rust\ai-chatbox\src\ais\assistant\mod.rs C:\Users\natha\code\rust\ai-chatbox\src\ais\mod.rs C:\Users\natha\code\rust\ai-chatbox\src\buddy\mod.rs C:\Users\natha\code\rust\ai-chatbox\src\error.rs C:\Users\natha\code\rust\ai-chatbox\src\main.rs

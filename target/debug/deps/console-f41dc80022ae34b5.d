@@ -1,0 +1,11 @@
+C:\Users\natha\code\rust\ai-chatbox\target\debug\deps\libconsole-f41dc80022ae34b5.rmeta: C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\lib.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\common_term.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\kb.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\term.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\utils.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\windows_term\mod.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\ansi.rs
+
+C:\Users\natha\code\rust\ai-chatbox\target\debug\deps\console-f41dc80022ae34b5.d: C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\lib.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\common_term.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\kb.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\term.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\utils.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\windows_term\mod.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\ansi.rs
+
+C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\lib.rs:
+C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\common_term.rs:
+C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\kb.rs:
+C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\term.rs:
+C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\utils.rs:
+C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\windows_term\mod.rs:
+C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\console-0.15.8\src\ansi.rs:

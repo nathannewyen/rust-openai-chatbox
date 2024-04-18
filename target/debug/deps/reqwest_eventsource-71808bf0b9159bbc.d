@@ -1,0 +1,9 @@
+C:\Users\natha\code\rust\ai-chatbox\target\debug\deps\libreqwest_eventsource-71808bf0b9159bbc.rmeta: C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\reqwest-eventsource-0.6.0\src\lib.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\reqwest-eventsource-0.6.0\src\error.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\reqwest-eventsource-0.6.0\src\event_source.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\reqwest-eventsource-0.6.0\src\reqwest_ext.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\reqwest-eventsource-0.6.0\src\retry.rs
+
+C:\Users\natha\code\rust\ai-chatbox\target\debug\deps\reqwest_eventsource-71808bf0b9159bbc.d: C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\reqwest-eventsource-0.6.0\src\lib.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\reqwest-eventsource-0.6.0\src\error.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\reqwest-eventsource-0.6.0\src\event_source.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\reqwest-eventsource-0.6.0\src\reqwest_ext.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\reqwest-eventsource-0.6.0\src\retry.rs
+
+C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\reqwest-eventsource-0.6.0\src\lib.rs:
+C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\reqwest-eventsource-0.6.0\src\error.rs:
+C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\reqwest-eventsource-0.6.0\src\event_source.rs:
+C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\reqwest-eventsource-0.6.0\src\reqwest_ext.rs:
+C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\reqwest-eventsource-0.6.0\src\retry.rs:

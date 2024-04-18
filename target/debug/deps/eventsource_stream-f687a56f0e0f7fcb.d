@@ -1,0 +1,10 @@
+C:\Users\natha\code\rust\ai-chatbox\target\debug\deps\libeventsource_stream-f687a56f0e0f7fcb.rmeta: C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\eventsource-stream-0.2.3\src\lib.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\eventsource-stream-0.2.3\src\event.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\eventsource-stream-0.2.3\src\event_stream.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\eventsource-stream-0.2.3\src\parser.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\eventsource-stream-0.2.3\src\traits.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\eventsource-stream-0.2.3\src\utf8_stream.rs
+
+C:\Users\natha\code\rust\ai-chatbox\target\debug\deps\eventsource_stream-f687a56f0e0f7fcb.d: C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\eventsource-stream-0.2.3\src\lib.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\eventsource-stream-0.2.3\src\event.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\eventsource-stream-0.2.3\src\event_stream.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\eventsource-stream-0.2.3\src\parser.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\eventsource-stream-0.2.3\src\traits.rs C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\eventsource-stream-0.2.3\src\utf8_stream.rs
+
+C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\eventsource-stream-0.2.3\src\lib.rs:
+C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\eventsource-stream-0.2.3\src\event.rs:
+C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\eventsource-stream-0.2.3\src\event_stream.rs:
+C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\eventsource-stream-0.2.3\src\parser.rs:
+C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\eventsource-stream-0.2.3\src\traits.rs:
+C:\Users\natha\.cargo\registry\src\index.crates.io-6f17d22bba15001f\eventsource-stream-0.2.3\src\utf8_stream.rs:
