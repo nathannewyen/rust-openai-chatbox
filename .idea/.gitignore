@@ -6,3 +6,7 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+# Environment variables
+.env
+# will have compiled files and executables
+/target/
