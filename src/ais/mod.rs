@@ -1,4 +1,5 @@
 pub mod assistant;
+pub mod msg;
 
 use async_openai::Client;
 use async_openai::config::OpenAIConfig;
