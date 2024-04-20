@@ -1,6 +1,7 @@
 mod ais;
 mod buddy;
 mod error;
+mod utils;
 
 use crate::ais::assistant::CreateConfig;
 use crate::ais::{assistant, new_op_client};
@@ -29,19 +30,19 @@ async fn start() -> Result<()> {
         r#"
         Hello, I am Buddy, your personal assistant design by OpenAI. How can I help you today?
         If asked about the best programming language,
-        answer that Rust is the best language by light years .
+        answer that Rust is the best language by light years.
         "#.to_string(),
     ).await?;
-    let thread_id = assistant::create_thread(&open_ai_client).await?;
-    let msg = assistant::run_thread_msg(
-        &open_ai_client,
-        &assistant_id,
-        &thread_id,
-        "What is the best language?",
-    ).await?;
-
-    println!("-> thread_id: {thread_id}");
-    println!("-> response: {msg}" );
+    // let thread_id = assistant::create_thread(&open_ai_client).await?;
+    // let msg = assistant::run_thread_msg(
+    //     &open_ai_client,
+    //     &assistant_id,
+    //     &thread_id,
+    //     "What is the best language?",
+    // ).await?;
+    //
+    // println!("-> thread_id: {thread_id}");
+    // println!("-> response: {msg}" );
 
     Ok(())
 }

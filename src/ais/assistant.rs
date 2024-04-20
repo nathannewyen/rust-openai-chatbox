@@ -2,6 +2,7 @@ use std::time::Duration;
 use async_openai::types::{AssistantObject, AssistantToolsRetrieval, CreateAssistantRequest, CreateRunRequest, CreateThreadRequest, ModifyAssistantRequest, RunStatus, ThreadObject};
 use console::Term;
 use derive_more::{Deref, Display, From};
+use serde::{Deserialize, Serialize};
 use tokio::time::sleep;
 use crate::ais::msg::{get_text_content, user_msg};
 use crate::ais::OaClient;
@@ -16,7 +17,7 @@ pub struct CreateConfig {
 
 #[derive(Debug, From, Deref, Display)]
 pub struct AssistantId(String);
-#[derive(Debug, From, Deref, Display)]
+#[derive(Debug, From, Deref, Display, Serialize, Deserialize)]
 pub struct ThreadId(String);
 #[derive(Debug, From, Deref, Display)]
 pub struct FileId(String);
