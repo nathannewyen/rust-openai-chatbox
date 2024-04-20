@@ -1,4 +1,4 @@
 # Environment variables
 .env
 # will have compiled files and executables
-/target/
+target/

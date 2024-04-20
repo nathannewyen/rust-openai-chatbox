@@ -1,5 +1,6 @@
 mod config;
 
+use std::fs;
 use std::path::{Path, PathBuf};
 use derive_more::{Deref, From};
 use serde::{Deserialize, Serialize};
@@ -7,7 +8,8 @@ use crate::ais::assistant::{AssistantId, ThreadId};
 use crate::ais::{assistant, new_op_client, OaClient};
 use crate::buddy::config::Config;
 use crate::Result;
-use crate::utils::files::{ensure_dir, load_from_toml};
+use crate::utils::cli::ico_check;
+use crate::utils::files::{ensure_dir, load_from_json, load_from_toml, read_to_string, save_to_json};
 
 const BUDDY_TOML: &str = "buddy.toml";
 
@@ -32,19 +34,19 @@ impl Buddy {
 
     pub async fn init_from_dir(
         dir: impl AsRef<Path>,
-        reccreate_assistant: bool,
+        recreate_asst: bool,
     ) -> Result<Self> {
         let dir = dir.as_ref();
 
-        // Load from the directory
+        // -- Load from the directory
         let config: Config = load_from_toml(dir.join(BUDDY_TOML))?;
 
-        // Get or Create the OpenAI Assistant
-        let open_ai_client = new_op_client();
+        // -- Get or Create the OpenAI Assistant
+        let open_ai_client = new_op_client()?;
         let assistant_id =
-            assistant::load_or_create_assistant(&open_ai_client, (&config).into(), reccreate_assistant).await?;
+            assistant::load_or_create_assistant(&open_ai_client, (&config).into(), recreate_asst).await?;
 
-        // Create buddy
+        // -- Create buddy
         let buddy = Buddy {
             dir: dir.to_path_buf(),
             open_ai_client,
@@ -52,9 +54,50 @@ impl Buddy {
             config,
         };
 
-        buddy.upload_intsructions().await?;
+        // -- Upload instructions
+        buddy.upload_instructions().await?;
+
+        // -- Upload files
+        buddy.upload_files(false).await?;
 
         Ok(buddy)
+    }
+
+    pub async fn upload_instructions(&self) -> Result<bool> {
+        let file = self.dir.join(&self.config.instructions_file);
+        if file.exists() {
+            let inst_content = read_to_string(&file)?;
+            assistant::upload_instructions(&self.open_ai_client, &self.assistant_id, inst_content)
+                .await?;
+            println!("{} Instructions uploaded", ico_check());
+            Ok(true)
+        } else {
+            Ok(false)
+        }
+    }
+
+    pub async fn load_or_create_conv(&self, recreate: bool) -> Result<Conv> {
+        let conv_file = self.data_sir()?.join("conv.json");
+
+        if recreate && conv_file.exist() {
+            fs::remove_file(&conv_file)?;
+        }
+
+        let conv = if let Ok(conv) = load_from_json::<Conv>(&conv_file) {
+            assistant::get_thread(&self.open_ai_client, &conv.thread_id)
+                .await
+                .map_err(|_| format!("Cannot find thread_id for {:?} ", conv))?;
+            print!("{} Conversation loaded", ico_check());
+            conv
+        } else {
+            let thread_id = assistant::create_thread(&self.open_ai_client).await?;
+            println!("{} Conversation created", ico_check());
+            let conv = thread_id.into();
+            save_to_json(&conv_file, &conv)?;
+            conv
+        };
+
+        Ok(conv)
     }
 }
 
