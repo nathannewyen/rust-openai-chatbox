@@ -58,7 +58,7 @@ impl Buddy {
         buddy.upload_instructions().await?;
 
         // -- Upload files
-        buddy.upload_files(false).await?;
+        // buddy.upload_files(false).await?;
 
         Ok(buddy)
     }
@@ -79,7 +79,7 @@ impl Buddy {
     pub async fn load_or_create_conv(&self, recreate: bool) -> Result<Conv> {
         let conv_file = self.data_sir()?.join("conv.json");
 
-        if recreate && conv_file.exist() {
+        if recreate && conv_file.exists() { // Use exists() instead of exist()
             fs::remove_file(&conv_file)?;
         }
 
@@ -98,6 +98,14 @@ impl Buddy {
         };
 
         Ok(conv)
+    }
+
+    pub async fn chat(&self, conv: &Conv, msg: &str) -> Result<String> {
+        let res =
+            assistant::run_thread_msg(&self.open_ai_client, &self.assistant_id, &conv.thread_id, msg)
+                .await?;
+
+        Ok(res)
     }
 }
 
