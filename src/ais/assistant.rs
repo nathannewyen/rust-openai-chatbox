@@ -201,6 +201,7 @@ pub async fn get_first_thread_msg_content(
     Ok(text)
 }
 
+#[allow(dead_code)]
 pub async fn get_files_hashmap(
     open_ai_client: &OaClient,
     assistant_id: &AssistantId,
@@ -231,6 +232,7 @@ pub async fn get_files_hashmap(
 /// - `force` is `true`, it will delete existing file (account and asst), and upload.
 ///
 /// Returns `(FileId, has_been_uploaded)`
+#[allow(dead_code)]
 pub async fn upload_file_by_name(
     oac: &OaClient,
     asst_id: &AssistantId,
@@ -264,10 +266,10 @@ pub async fn upload_file_by_name(
 
         // -- Delete the asst_file association
         let oa_assts = oac.assistants();
-        let oa_assts_files = oa_assts.files(^&asst_id.0);
+        let oa_assts_files = oa_assts.files(&asst_id.0);
         if let Err(err) = oa_assts_files.delete(&file_id.0).await {
             println!(
-                "{} Can't remove assistant file '{}'\n    cause: {}",
+                "{} Can't remove assistant file '{}'\n    cause: {:?}",
                 ico_err(),
                 file.x_file_name(),
                 err

@@ -4,8 +4,6 @@ mod error;
 mod utils;
 
 use textwrap::wrap;
-use crate::ais::assistant::CreateConfig;
-use crate::ais::{assistant, new_op_client};
 use crate::buddy::Buddy;
 use crate::utils::cli::{ico_err, ico_res, prompt, txt_res};
 pub use self::error::{Error, Result};
@@ -54,6 +52,7 @@ impl Cmd {
     }
 }
 
+#[allow(unused)]
 async fn start() -> Result<()> {
     let mut buddy = Buddy::init_from_dir(DEFAULT_DIR, false).await?;
 
