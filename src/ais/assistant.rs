@@ -1,16 +1,22 @@
-use std::collections::{HashMap, HashSet};
-use std::path::Path;
-use std::time::Duration;
-use async_openai::types::{AssistantObject, AssistantToolsRetrieval, CreateAssistantFileRequest, CreateAssistantRequest, CreateFileRequest, CreateRunRequest, CreateThreadRequest, ModifyAssistantRequest, RunStatus, ThreadObject};
+use crate::ais::msg::{get_text_content, user_msg};
+use crate::ais::OaClient;
+use crate::utils::cli::{
+    ico_check, ico_deleted_ok, ico_err, ico_uploaded, ico_uploading,
+};
+use crate::utils::files::XFile;
+use crate::Result;
+use async_openai::types::{
+    AssistantObject, AssistantToolsRetrieval, CreateAssistantFileRequest,
+    CreateAssistantRequest, CreateFileRequest, CreateRunRequest,
+    CreateThreadRequest, ModifyAssistantRequest, RunStatus, ThreadObject,
+};
 use console::Term;
 use derive_more::{Deref, Display, From};
 use serde::{Deserialize, Serialize};
+use std::collections::{HashMap, HashSet};
+use std::path::Path;
+use std::time::Duration;
 use tokio::time::sleep;
-use crate::ais::msg::{get_text_content, user_msg};
-use crate::ais::OaClient;
-use crate::Result;
-use crate::utils::cli::{ico_check, ico_deleted_ok, ico_err, ico_uploaded, ico_uploading};
-use crate::utils::files::XFile;
 
 #[ allow(unused)]
 const DEFAULT_QUERY: &[(&str, &str)] = &[("limit", "100")];
@@ -247,7 +253,7 @@ pub async fn upload_file_by_name(
     if let Some(file_id) = file_id {
         // -- Delete the org file
         let oa_files = oac.files();
-        if let Err(err) = oa_files.delete(&file_id).await {
+        if let Err(err) = oa_files.delete(&file_id.0).await {
             println!(
                 "{} Can't delete file '{}'\n    cause: {:?}",
                 ico_err(),
